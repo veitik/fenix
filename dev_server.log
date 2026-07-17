@@ -1,0 +1,23 @@
+
+> temp_app@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.10 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+✓ Ready in 533ms
+
+○ Compiling / ...
+React does not recognize the `asChild` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `aschild` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+ GET / 200 in 8.2s (next.js: 7.0s, application-code: 1199ms)
+[browser] React does not recognize the `asChild` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `aschild` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+ GET /services 200 in 825ms (next.js: 728ms, application-code: 97ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /projects 200 in 707ms (next.js: 667ms, application-code: 40ms)
+ GET /contacts 200 in 752ms (next.js: 708ms, application-code: 44ms)
+✓ Compiled in 47ms
+✓ Compiled in 36ms
+✓ Compiled in 42ms
+✓ Compiled in 31ms
+✓ Compiled in 24ms
+✓ Compiled in 28ms
