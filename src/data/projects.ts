@@ -44,19 +44,65 @@ export const projectsData = [
 export const certificatesData = [
   {
     id: 1,
-    title: "Свидетельство СРО",
+    title: "Свидетельство СРО (стр. 1)",
     description: "Свидетельство Саморегулируемой организации НП \"Межрегиональное объединение строителей\"",
-    image: "/images/certificates/sro.jpg", // placeholder
+    image: "/images/certificates/IMG-0001.png",
     date: "22.04.2013"
   },
-  // Add placeholders for other certificates from the original site
+  {
+    id: 2,
+    title: "Свидетельство СРО (стр. 2)",
+    description: "Свидетельство Саморегулируемой организации НП \"Межрегиональное объединение строителей\"",
+    image: "/images/certificates/IMG-0002.png",
+    date: "22.04.2013"
+  },
+  {
+    id: 3,
+    title: "Приложение к СРО (стр. 1)",
+    description: "Перечень видов работ",
+    image: "/images/certificates/IMG-0003.png",
+    date: "22.04.2013"
+  },
+  {
+    id: 4,
+    title: "Приложение к СРО (стр. 2)",
+    description: "Перечень видов работ",
+    image: "/images/certificates/IMG-0004.png",
+    date: "22.04.2013"
+  },
+  {
+    id: 5,
+    title: "Приложение к СРО (стр. 3)",
+    description: "Перечень видов работ",
+    image: "/images/certificates/IMG-0005.png",
+    date: "22.04.2013"
+  }
 ];
 
 export const reviewsData = [
   {
     id: 1,
-    client: "ОАО «Санаторий металлург»",
-    text: "Благодарим ООО СК Феникс за качественно выполненные работы по капитальному ремонту.",
-    image: "/images/reviews/review1.jpg" // placeholder
+    client: "Отзыв 1",
+    image: "/images/reviews/0001.jpg"
+  },
+  {
+    id: 2,
+    client: "Отзыв 2",
+    image: "/images/reviews/0002.jpg"
+  },
+  {
+    id: 3,
+    client: "Отзыв 3",
+    image: "/images/reviews/0003.jpg"
+  },
+  {
+    id: 4,
+    client: "Отзыв 4",
+    image: "/images/reviews/0004.jpg"
+  },
+  {
+    id: 5,
+    client: "Отзыв 5",
+    image: "/images/reviews/0005.jpg"
   }
 ];
