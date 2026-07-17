@@ -122,7 +122,7 @@ export default function ContactsPage() {
 
       <div className="h-[500px] w-full bg-gray-200 relative">
         <iframe
-          src="https://yandex.ru/map-widget/v1/?ll=53.250551%2C56.848805&mode=search&oid=166164215286&ol=biz&z=16.89"
+          src="https://yandex.ru/map-widget/v1/?ll=53.251000%2C56.848805&mode=search&text=Ижевск,+Курортная+улица,+12&z=16"
           width="100%"
           height="100%"
           frameBorder="0"

@@ -4,7 +4,7 @@ export const projectsData = [
     title: "ОАО «Санаторий металлург»",
     location: "г. Ижевск",
     description: "Капитальный ремонт и отделочные работы.",
-    image: "/images/projects/project1.jpg", // placeholder path
+    image: "/images/projects/project1.jpg",
     category: "Капитальный ремонт"
   },
   {

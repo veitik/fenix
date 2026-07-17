@@ -1,6 +1,7 @@
 import { Section } from "@/components/Section";
 import { projectsData } from "@/data/projects";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: 'Проекты | СК Феникс',
@@ -26,10 +27,15 @@ export default function ProjectsPage() {
           {projectsData.map((project) => (
             <div key={project.id} className="break-inside-avoid rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow group bg-white">
               <div className="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-200">
-                  <span className="text-sm">Фото объекта</span>
-                </div>
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-primary z-10">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-semibold text-primary z-10 shadow-sm">
                   {project.category}
                 </div>
               </div>

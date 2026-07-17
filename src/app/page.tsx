@@ -5,6 +5,7 @@ import { companyData } from "@/data/company";
 import { servicesData } from "@/data/services";
 import { projectsData } from "@/data/projects";
 import { CheckCircle2, Award, Users, HardHat, ShieldCheck, Wrench, FileText, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -182,13 +183,14 @@ export default function Home() {
         <div className="grid md:grid-cols-3 gap-6">
           {projectsData.slice(0, 3).map(project => (
             <div key={project.id} className="group relative overflow-hidden rounded-xl bg-gray-800 border border-gray-700 aspect-[4/3]">
-              <div className="absolute inset-0 bg-gray-700">
-                 {/* Placeholder for actual image */}
-                 <div className="w-full h-full flex items-center justify-center text-gray-500">
-                   Фото проекта
-                 </div>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent opacity-80" />
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-80" />
               <div className="absolute inset-x-0 bottom-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                 <span className="text-xs font-medium text-primary mb-2 block">{project.category}</span>
                 <h3 className="text-lg font-bold text-white mb-1">{project.title}</h3>

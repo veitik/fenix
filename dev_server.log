@@ -43,3 +43,16 @@ React does not recognize the `asChild` prop on a DOM element. If you intentional
  GET /projects 200 in 59ms (next.js: 7ms, application-code: 52ms)
  GET /contacts 200 in 70ms (next.js: 11ms, application-code: 60ms)
 ✓ Compiled in 60ms
+✓ Compiled in 9.4s
+✓ Compiled in 135ms
+✓ Compiled in 56ms
+✓ Compiled in 282ms
+✓ Compiled in 131ms
+ GET / 200 in 1898ms (next.js: 248ms, application-code: 1650ms)
+ GET /images/logo.png 404 in 153ms (next.js: 34ms, application-code: 119ms)
+⨯ The requested resource isn't a valid image for /images/logo.png received null
+[browser] Image with src "/images/logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+ GET /services 200 in 121ms (next.js: 25ms, application-code: 96ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /projects 200 in 86ms (next.js: 28ms, application-code: 58ms)
+ GET /contacts 200 in 71ms (next.js: 23ms, application-code: 47ms)
