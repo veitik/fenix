@@ -21,3 +21,5 @@ React does not recognize the `asChild` prop on a DOM element. If you intentional
 ✓ Compiled in 31ms
 ✓ Compiled in 24ms
 ✓ Compiled in 28ms
+✓ Compiled in 3.9s
+✓ Compiled in 1342ms

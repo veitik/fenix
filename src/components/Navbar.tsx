@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
   { name: "Главная", href: "/" },
@@ -36,10 +37,16 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 group">
-            {/* Logo placeholder - replace with actual logo later */}
-            <div className="w-10 h-10 bg-primary rounded flex items-center justify-center text-white font-bold text-xl group-hover:bg-primary-hover transition-colors">
-              Ф
+          <Link href="/" className="flex items-center gap-3 group">
+            {/* Replace /images/logo.png with your actual logo path and adjust dimensions if needed */}
+            <div className="relative w-12 h-12">
+              <Image
+                src="/images/logo.png"
+                alt="Логотип СК ФЕНИКС"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-xl tracking-tight leading-none text-gray-900">СК ФЕНИКС</span>

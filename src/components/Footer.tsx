@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,8 +12,13 @@ export default function Footer() {
           {/* Company Info */}
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-primary rounded flex items-center justify-center text-white font-bold text-lg">
-                Ф
+              <div className="relative w-8 h-8">
+                <Image
+                  src="/images/logo.png"
+                  alt="Логотип СК ФЕНИКС"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <span className="font-bold text-lg tracking-tight text-gray-900">СК ФЕНИКС</span>
             </Link>
