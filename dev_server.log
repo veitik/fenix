@@ -23,3 +23,13 @@ React does not recognize the `asChild` prop on a DOM element. If you intentional
 ✓ Compiled in 28ms
 ✓ Compiled in 3.9s
 ✓ Compiled in 1342ms
+✓ Compiled in 1006ms
+✓ Compiled in 1766ms
+✓ Compiled in 98ms
+ GET / 200 in 1654ms (next.js: 624ms, application-code: 1030ms)
+ GET /images/logo.png 404 in 3.1s (next.js: 3.0s, application-code: 77ms)
+⨯ The requested resource isn't a valid image for /images/logo.png received null
+ GET /services 200 in 125ms (next.js: 44ms, application-code: 81ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /projects 200 in 111ms (next.js: 38ms, application-code: 73ms)
+ GET /contacts 200 in 76ms (next.js: 31ms, application-code: 45ms)

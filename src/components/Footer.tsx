@@ -38,19 +38,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
-          <div className="flex flex-col gap-4">
-            <h3 className="font-semibold text-gray-900">Услуги</h3>
-            <ul className="flex flex-col gap-2">
-              <li className="text-sm text-gray-600">Генподряд</li>
-              <li className="text-sm text-gray-600">Отделочные работы</li>
-              <li className="text-sm text-gray-600">Инженерные сети</li>
-              <li className="text-sm text-gray-600">Капитальный ремонт</li>
-            </ul>
-          </div>
-
           {/* Contacts */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 lg:col-span-2">
             <h3 className="font-semibold text-gray-900">Контакты</h3>
             <ul className="flex flex-col gap-3">
               <li className="flex items-start gap-3 text-sm text-gray-600">

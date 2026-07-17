@@ -2,7 +2,6 @@ import { Section } from "@/components/Section";
 import { companyData } from "@/data/company";
 import { Metadata } from "next";
 import { MapPin, Phone, Mail } from "lucide-react";
-import { Button } from "@/components/Button";
 
 export const metadata: Metadata = {
   title: 'Контакты | СК Феникс',
@@ -86,43 +85,51 @@ export default function ContactsPage() {
 
           <div>
             <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-xl shadow-gray-200/40">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Оставить заявку</h2>
-              <form className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Ваше имя</label>
-                  <input type="text" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Иван Иванов" />
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Телефон</label>
-                    <input type="tel" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="+7 (___) ___-__-__" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                    <input type="email" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="mail@example.com" />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Сообщение</label>
-                  <textarea rows={4} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all resize-none" placeholder="Опишите вашу задачу..." />
-                </div>
-                <Button size="lg" className="w-full mt-4 text-base">
-                  Отправить заявку
-                </Button>
-                <p className="text-xs text-gray-500 text-center mt-4">
-                  Нажимая кнопку, вы соглашаетесь с Политикой конфиденциальности.
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Как заказать услуги?</h2>
+              <div className="space-y-6 text-gray-600">
+                <p>
+                  Для заказа строительных, ремонтных или отделочных работ, а также для получения подробной консультации и расчета стоимости, пожалуйста, свяжитесь с нами напрямую.
                 </p>
-              </form>
+                <div className="p-6 bg-primary/5 rounded-xl border border-primary/10">
+                  <h3 className="font-semibold text-gray-900 mb-2">Наши специалисты готовы ответить на ваши вопросы:</h3>
+                  <ul className="space-y-3 mt-4">
+                    <li className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary shadow-sm shrink-0">
+                        <Phone size={16} />
+                      </div>
+                      <a href={`tel:${companyData.contacts.phone.replace(/[^0-9+]/g, '')}`} className="font-medium hover:text-primary transition-colors">
+                        {companyData.contacts.phone}
+                      </a>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary shadow-sm shrink-0">
+                        <Mail size={16} />
+                      </div>
+                      <a href={`mailto:${companyData.contacts.email}`} className="font-medium hover:text-primary transition-colors">
+                        {companyData.contacts.email}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <p className="text-sm">
+                  Мы работаем с промышленными предприятиями и частными лицами, выполняя полный комплекс работ «под ключ».
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </Section>
 
-      <div className="h-[400px] w-full bg-gray-200 relative">
-         {/* Placeholder for map */}
-         <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-           Интерактивная карта (Яндекс/Google)
-         </div>
+      <div className="h-[500px] w-full bg-gray-200 relative">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?ll=53.250551%2C56.848805&mode=search&oid=166164215286&ol=biz&z=16.89"
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          allowFullScreen={true}
+          style={{ position: 'relative' }}
+          title="Интерактивная карта Яндекс - СК Феникс"
+        ></iframe>
       </div>
     </div>
   );
