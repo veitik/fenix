@@ -15,7 +15,7 @@ export default function ServicesPage() {
     <div className="flex flex-col min-h-screen">
       <section className="relative py-16 md:py-24 border-b border-gray-200 overflow-hidden">
         <div className="absolute inset-0 z-0">
-            <Image src="/images/textures/concrete.webp" alt="concrete" fill className="object-cover opacity-30" />
+            <Image src="/images/textures/gravel.webp" alt="concrete" fill className="object-cover opacity-10" />
         </div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -47,7 +47,7 @@ export default function ServicesPage() {
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   {/* Heavy white overlay to ensure text readability */}
-                  <div className="absolute inset-0 bg-white/90 backdrop-blur-[2px] transition-colors duration-300 group-hover:bg-white/85" />
+                  <div className="absolute inset-0 bg-white/75 backdrop-blur-[2px] transition-colors duration-300 group-hover:bg-white/65" />
                 </div>
 
                 <div className="relative z-10 flex flex-col h-full">

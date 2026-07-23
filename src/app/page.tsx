@@ -106,7 +106,7 @@ export default function Home() {
       {/* About Summary */}
       <Section className="relative bg-white overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-[0.04] pointer-events-none">
-           <Image src="/images/textures/blocks.webp" alt="blocks texture" fill className="object-cover" />
+           <Image src="/images/textures/gravel.webp" alt="blocks texture" fill className="object-cover" />
         </div>
         <motion.div
           ref={aboutRef}
@@ -176,8 +176,8 @@ export default function Home() {
 
       {/* Services Overview */}
       <Section className="relative border-y border-gray-200/60 overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-           <Image src="/images/textures/concrete.webp" alt="concrete texture" fill className="object-cover" />
+        <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
+           <Image src="/images/textures/gravel.webp" alt="concrete texture" fill className="object-cover" />
         </div>
         <div className="absolute inset-0 z-0 bg-white/70 backdrop-blur-[1px] pointer-events-none"></div>
 
@@ -208,7 +208,7 @@ export default function Home() {
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-white/95 backdrop-blur-[1px] transition-colors duration-300 group-hover:bg-white/90" />
+                    <div className="absolute inset-0 bg-white/80 backdrop-blur-[1px] transition-colors duration-300 group-hover:bg-white/70" />
                   </div>
 
                   <div className="relative z-10 flex flex-col h-full">
@@ -240,7 +240,7 @@ export default function Home() {
       {/* Construction Process Timeline */}
       <Section className="relative bg-white overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none">
-           <Image src="/images/textures/wood.webp" alt="wood texture" fill className="object-cover" />
+           <Image src="/images/textures/gravel.webp" alt="wood texture" fill className="object-cover" />
         </div>
 
         <div className="relative z-10 text-center max-w-2xl mx-auto mb-20">
