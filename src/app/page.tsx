@@ -8,6 +8,7 @@ import { servicesData } from "@/data/services";
 import { projectsData } from "@/data/projects";
 import { CheckCircle2, Award, Users, HardHat, ShieldCheck, Wrench, FileText, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { AnimatedCounters } from "@/components/AnimatedCounters";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -35,73 +36,59 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section - Redesigned with premium image and floating elements */}
-      <section className="relative h-[85vh] min-h-[650px] flex items-center bg-gray-900 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero-bg.jpg"
-            alt="Строительство"
-            fill
-            className="object-cover"
-            priority
-          />
-          {/* Elegant gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-transparent" />
+      <section className="relative pt-32 pb-32 md:pt-48 md:pb-48 overflow-hidden flex items-center min-h-[90vh]">
+        {/* Background Video */}
+        <div className="absolute inset-0 z-0 bg-black">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="object-cover w-full h-full opacity-60"
+          >
+            <source src="/videos/hero-video.mp4" type="video/mp4" />
+          </video>
+          {/* subtle dot grid on top of video */}
+          <div className="absolute inset-0 bg-dot-grid-dark opacity-20 z-10 pointer-events-none" />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container relative z-20 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial="hidden"
+              animate="visible"
+              variants={fadeUp}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary-hover mb-6 backdrop-blur-md">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                </span>
-                <span className="text-xs font-semibold uppercase tracking-wider text-white">Генеральный подрядчик</span>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-white/5 border border-white/10 backdrop-blur-md mb-6 shadow-sm">
+                <span className="w-2 h-2 rounded-none bg-primary animate-pulse"></span>
+                <span className="text-white text-sm font-medium tracking-wider uppercase">Генеральный подрядчик</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight">
-                Надежность,<br/>проверенная <span className="text-primary">временем</span>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-6 leading-[1.1] uppercase">
+                Масштаб.<br />
+                Опыт.<br />
+                <span className="text-primary">Инженерия.</span>
               </h1>
-              <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
-                Полный комплекс строительных, ремонтных и отделочных работ. Строим и реконструируем промышленные и гражданские объекты &quot;под ключ&quot;.
+              <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl font-medium tracking-wide">
+                {companyData.description}
               </p>
+
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" href="/contacts" className="text-base font-semibold shadow-lg shadow-primary/20 h-14 px-8 text-white">
-                  Заказать расчет проекта
+                <Button size="lg" className="text-base font-semibold h-14 px-8 shadow-lg shadow-primary/30 group relative overflow-hidden bg-primary hover:bg-primary-hover text-white border-none rounded-none" href="/contacts">
+                  <span className="relative z-10 flex items-center gap-2 uppercase tracking-widest text-sm">
+                    Обсудить проект
+                    <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
                 </Button>
-                <Button size="lg" variant="outline" className="text-white border-white/30 hover:bg-white hover:text-gray-900 text-base font-semibold h-14 px-8 backdrop-blur-sm" href="/projects">
-                  Смотреть портфолио
+                <Button size="lg" variant="outline" className="text-white border-white/30 hover:bg-white hover:text-gray-900 text-sm tracking-widest uppercase font-semibold h-14 px-8 backdrop-blur-sm rounded-none" href="/projects">
+                  Наши проекты
                 </Button>
               </div>
             </motion.div>
           </div>
         </div>
-
-        {/* Floating Accent Element */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="hidden lg:block absolute bottom-12 right-12 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl max-w-xs shadow-2xl"
-        >
-          <div className="flex items-center gap-4 mb-4">
-            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shrink-0">
-               <ShieldCheck size={24} />
-            </div>
-            <div className="text-white">
-              <p className="font-bold text-xl">СРО</p>
-              <p className="text-xs text-gray-300">Официальный допуск</p>
-            </div>
-          </div>
-          <p className="text-sm text-gray-300 line-clamp-2">
-            Гарантируем качество и безопасность работ в соответствии с госстандартами.
-          </p>
-        </motion.div>
       </section>
+
+      <AnimatedCounters />
 
       {/* About Summary */}
       <Section className="bg-white overflow-hidden">
@@ -172,48 +159,80 @@ export default function Home() {
       </Section>
 
       {/* Services Overview */}
-      <Section className="bg-gray-50 border-y border-gray-200/60">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Экспертиза</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 tracking-tight">Наши Услуги</h2>
-          <p className="text-gray-600 text-lg">
-            Мы предлагаем полный спектр строительных и ремонтных услуг, выполняя работы качественно и точно в срок.
-          </p>
-        </div>
+      <Section className="relative bg-white overflow-hidden border-t border-cad-border">
+        {/* CAD Style Grid Background */}
+        <div className="absolute inset-0 z-0 bg-dot-grid opacity-50 pointer-events-none"></div>
 
-        <motion.div
-          ref={servicesRef}
-          initial="hidden"
-          animate={servicesInView ? "visible" : "hidden"}
-          variants={staggerContainer}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {servicesData.slice(0, 6).map((service) => {
-            const Icon = service.icon;
-            return (
-              <motion.div key={service.id} variants={fadeUp}>
-                <Card className="h-full hover:shadow-xl hover:border-primary/20 transition-all duration-300 group bg-white border-gray-100">
-                  <CardHeader>
-                    <div className="w-14 h-14 rounded-xl bg-gray-50 flex items-center justify-center text-gray-600 group-hover:bg-primary group-hover:text-white transition-colors duration-300 mb-4 group-hover:scale-110">
-                      <Icon size={26} />
+        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8" ref={servicesRef}>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <motion.h2
+              className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 uppercase tracking-tight"
+              initial="hidden"
+              animate={servicesInView ? "visible" : "hidden"}
+              variants={fadeUp}
+            >
+              Наши Услуги
+            </motion.h2>
+            <motion.div
+              className="w-20 h-1 bg-primary mx-auto mb-6"
+              initial={{ width: 0 }}
+              animate={servicesInView ? { width: 80 } : {}}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            ></motion.div>
+            <motion.p
+              className="text-lg text-gray-600"
+              initial="hidden"
+              animate={servicesInView ? "visible" : "hidden"}
+              variants={fadeUp}
+            >
+              Комплексные строительные и инженерные решения. Строгий контроль качества на каждом этапе.
+            </motion.p>
+          </div>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border border-cad-border bg-gray-50 relative z-20"
+            initial="hidden"
+            animate={servicesInView ? "visible" : "hidden"}
+            variants={staggerContainer}
+          >
+            {servicesData.slice(0, 6).map((service) => {
+              const Icon = service.icon;
+              return (
+                <motion.div key={service.id} variants={fadeUp}>
+                  <div className="group relative overflow-hidden bg-white p-8 h-full border-[0.5px] border-cad-border hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 z-10 hover:z-20">
+                    <div className="w-14 h-14 bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-400 mb-6 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300 rounded-sm">
+                      <Icon className="w-7 h-7" />
                     </div>
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors">{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-base text-gray-600 leading-relaxed">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors uppercase tracking-wide text-sm">{service.title}</h3>
+                    <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed text-sm">
                       {service.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            );
-          })}
-        </motion.div>
+                    </p>
+                    <div className="mt-auto">
+                      <Button variant="link" className="p-0 h-auto text-primary font-semibold group-hover:translate-x-2 transition-transform uppercase tracking-wider text-xs" href="/services">
+                        Подробнее <ChevronRight className="w-4 h-4 ml-1" />
+                      </Button>
+                    </div>
+                    {/* decorative cad corners */}
+                    <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
 
-        <div className="mt-16 text-center">
-          <Button href="/services" variant="outline" size="lg" className="border-gray-300 px-8 text-base">
-            Смотреть все услуги
-          </Button>
+          <motion.div
+            className="text-center mt-12 relative z-20"
+            initial="hidden"
+            animate={servicesInView ? "visible" : "hidden"}
+            variants={fadeUp}
+          >
+            <Button size="lg" variant="outline" className="border-cad-border hover:border-primary hover:bg-primary hover:text-white uppercase font-bold tracking-wider rounded-sm bg-white" href="/services">
+              Все услуги
+            </Button>
+          </motion.div>
         </div>
       </Section>
 
