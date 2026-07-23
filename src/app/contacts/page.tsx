@@ -2,7 +2,6 @@ import { Section } from "@/components/Section";
 import { companyData } from "@/data/company";
 import { Metadata } from "next";
 import { MapPin, Phone, Mail } from "lucide-react";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: 'Контакты | СК Феникс',
@@ -13,7 +12,7 @@ export default function ContactsPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <section className="bg-gray-50 py-16 md:py-24 border-b border-gray-200">
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Контакты
           </h1>
@@ -23,10 +22,7 @@ export default function ContactsPage() {
         </div>
       </section>
 
-      <Section className="bg-white relative overflow-hidden">
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-10">
-          <Image src="/images/textures/gravel.webp" alt="background texture" fill className="object-cover" />
-        </div>
+      <Section className="bg-white">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24">
           <div className="space-y-12">
             <div>

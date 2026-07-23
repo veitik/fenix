@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Section } from "@/components/Section";
 import { companyData } from "@/data/company";
 import { Metadata } from "next";
@@ -12,17 +11,14 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <section className="bg-gray-50 py-16 md:py-24 border-b border-gray-200">
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Политика Конфиденциальности
           </h1>
         </div>
       </section>
 
-      <Section className="bg-white relative overflow-hidden">
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-10">
-          <Image src="/images/textures/gravel.webp" alt="background texture" fill className="object-cover" />
-        </div>
+      <Section className="bg-white">
         <div className="max-w-3xl mx-auto prose prose-gray">
           <h2>1. Общие положения</h2>
           <p>

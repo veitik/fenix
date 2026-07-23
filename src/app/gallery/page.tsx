@@ -18,7 +18,7 @@ export default function GalleryPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <section className="bg-gray-50 py-16 md:py-24 border-b border-gray-200">
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Фотогалерея
           </h1>
@@ -28,10 +28,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <Section className="bg-white relative overflow-hidden">
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-10">
-          <Image src="/images/textures/gravel.webp" alt="background texture" fill className="object-cover" />
-        </div>
+      <Section className="bg-white">
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
           {galleryItems.map((item) => (
             <a

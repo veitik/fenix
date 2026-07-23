@@ -104,16 +104,13 @@ export default function Home() {
       </section>
 
       {/* About Summary */}
-      <Section className="relative bg-white overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-[0.04] pointer-events-none">
-           <Image src="/images/textures/gravel.webp" alt="blocks texture" fill className="object-cover" />
-        </div>
+      <Section className="bg-white overflow-hidden">
         <motion.div
           ref={aboutRef}
-          className="relative z-10 grid lg:grid-cols-2 gap-12 items-center"
           initial="hidden"
           animate={aboutInView ? "visible" : "hidden"}
           variants={fadeUp}
+          className="grid lg:grid-cols-2 gap-12 items-center"
         >
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 tracking-tight">Опыт, инженерия<br/>и профессионализм</h2>
@@ -175,13 +172,8 @@ export default function Home() {
       </Section>
 
       {/* Services Overview */}
-      <Section className="relative border-y border-gray-200/60 overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
-           <Image src="/images/textures/gravel.webp" alt="concrete texture" fill className="object-cover" />
-        </div>
-        <div className="absolute inset-0 z-0 bg-white/70 backdrop-blur-[1px] pointer-events-none"></div>
-
-        <div className="relative z-10 text-center max-w-2xl mx-auto mb-16">
+      <Section className="bg-gray-50 border-y border-gray-200/60">
+        <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Экспертиза</span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 tracking-tight">Наши Услуги</h2>
           <p className="text-gray-600 text-lg">
@@ -194,43 +186,31 @@ export default function Home() {
           initial="hidden"
           animate={servicesInView ? "visible" : "hidden"}
           variants={staggerContainer}
-          className="relative z-10 grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {servicesData.slice(0, 6).map((service) => {
             const Icon = service.icon;
             return (
               <motion.div key={service.id} variants={fadeUp}>
-                <Card className="h-full group relative overflow-hidden transition-all duration-300 border border-gray-200 shadow-sm hover:shadow-xl hover:border-primary/50">
-                  <div className="absolute inset-0 z-0">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-white/80 backdrop-blur-[1px] transition-colors duration-300 group-hover:bg-white/70" />
-                  </div>
-
-                  <div className="relative z-10 flex flex-col h-full">
-                    <CardHeader>
-                      <div className="w-14 h-14 rounded-xl bg-white shadow-sm flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                        <Icon size={26} />
-                      </div>
-                      <CardTitle className="text-xl text-gray-900 drop-shadow-sm">{service.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex flex-col flex-grow">
-                      <CardDescription className="text-base text-gray-800 leading-relaxed font-medium">
-                        {service.description}
-                      </CardDescription>
-                    </CardContent>
-                  </div>
+                <Card className="h-full hover:shadow-xl hover:border-primary/20 transition-all duration-300 group bg-white border-gray-100">
+                  <CardHeader>
+                    <div className="w-14 h-14 rounded-xl bg-gray-50 flex items-center justify-center text-gray-600 group-hover:bg-primary group-hover:text-white transition-colors duration-300 mb-4 group-hover:scale-110">
+                      <Icon size={26} />
+                    </div>
+                    <CardTitle className="text-xl group-hover:text-primary transition-colors">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-base text-gray-600 leading-relaxed">
+                      {service.description}
+                    </CardDescription>
+                  </CardContent>
                 </Card>
               </motion.div>
             );
           })}
         </motion.div>
 
-        <div className="relative z-10 mt-16 text-center">
+        <div className="mt-16 text-center">
           <Button href="/services" variant="outline" size="lg" className="border-gray-300 px-8 text-base">
             Смотреть все услуги
           </Button>
@@ -238,12 +218,8 @@ export default function Home() {
       </Section>
 
       {/* Construction Process Timeline */}
-      <Section className="relative bg-white overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none">
-           <Image src="/images/textures/gravel.webp" alt="wood texture" fill className="object-cover" />
-        </div>
-
-        <div className="relative z-10 text-center max-w-2xl mx-auto mb-20">
+      <Section className="bg-white">
+        <div className="text-center max-w-2xl mx-auto mb-20">
            <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Этапы</span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 tracking-tight">Процесс Работы</h2>
           <p className="text-gray-600 text-lg">

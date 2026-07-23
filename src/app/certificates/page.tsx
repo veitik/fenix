@@ -12,7 +12,7 @@ export default function CertificatesPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <section className="bg-gray-50 py-16 md:py-24 border-b border-gray-200">
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Сертификаты и Лицензии
           </h1>
@@ -22,10 +22,7 @@ export default function CertificatesPage() {
         </div>
       </section>
 
-      <Section className="bg-white relative overflow-hidden">
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-10">
-          <Image src="/images/textures/gravel.webp" alt="background texture" fill className="object-cover" />
-        </div>
+      <Section className="bg-white">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {certificatesData.map((cert) => (
             <div key={cert.id} className="group flex flex-col gap-4">
