@@ -28,8 +28,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <Section className="bg-gray-50 relative overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-dot-grid opacity-[0.15] pointer-events-none"></div>
+      <Section className="bg-white/80 backdrop-blur-[2px]">
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
           {galleryItems.map((item) => (
             <a
@@ -37,7 +36,7 @@ export default function GalleryPage() {
               href={item.image}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative break-inside-avoid w-full h-80 bg-gray-100 rounded-none overflow-hidden group cursor-pointer block border border-gray-100"
+              className="relative break-inside-avoid w-full h-80 bg-gray-100 rounded-xl overflow-hidden group cursor-pointer block border border-gray-100"
             >
               <Image
                 src={item.image}
@@ -48,7 +47,7 @@ export default function GalleryPage() {
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
               <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="bg-gray-50/95 backdrop-blur-sm text-gray-900 text-xs font-semibold px-3 py-1.5 rounded-none shadow-sm">
+                <span className="bg-white/95 backdrop-blur-sm text-gray-900 text-xs font-semibold px-3 py-1.5 rounded-full shadow-sm">
                   {item.category}
                 </span>
               </div>

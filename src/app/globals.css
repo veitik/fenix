@@ -1,10 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #ff6600;
+  --color-primary: #ff6600; /* Example placeholder, ideally logo color */
   --color-primary-hover: #e65c00;
   --color-blue-accent: #0056b3;
-  --color-cad-border: #d1d5db;
 }
 
 @layer base {
@@ -14,7 +13,7 @@
   }
 
   body {
-    background-color: #fafafa;
+    background-color: white;
     color: #333333;
   }
 }
@@ -22,15 +21,5 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
-  }
-
-  .bg-dot-grid {
-    background-image: radial-gradient(#d1d5db 1px, transparent 1px);
-    background-size: 24px 24px;
-  }
-
-  .bg-dot-grid-dark {
-    background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px);
-    background-size: 24px 24px;
   }
 }

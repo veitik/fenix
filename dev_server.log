@@ -1,0 +1,60 @@
+
+> temp_app@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.10 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+✓ Ready in 533ms
+
+○ Compiling / ...
+React does not recognize the `asChild` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `aschild` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+ GET / 200 in 8.2s (next.js: 7.0s, application-code: 1199ms)
+[browser] React does not recognize the `asChild` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `aschild` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+ GET /services 200 in 825ms (next.js: 728ms, application-code: 97ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /projects 200 in 707ms (next.js: 667ms, application-code: 40ms)
+ GET /contacts 200 in 752ms (next.js: 708ms, application-code: 44ms)
+✓ Compiled in 47ms
+✓ Compiled in 36ms
+✓ Compiled in 42ms
+✓ Compiled in 31ms
+✓ Compiled in 24ms
+✓ Compiled in 28ms
+✓ Compiled in 3.9s
+✓ Compiled in 1342ms
+✓ Compiled in 1006ms
+✓ Compiled in 1766ms
+✓ Compiled in 98ms
+ GET / 200 in 1654ms (next.js: 624ms, application-code: 1030ms)
+ GET /images/logo.png 404 in 3.1s (next.js: 3.0s, application-code: 77ms)
+⨯ The requested resource isn't a valid image for /images/logo.png received null
+ GET /services 200 in 125ms (next.js: 44ms, application-code: 81ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /projects 200 in 111ms (next.js: 38ms, application-code: 73ms)
+ GET /contacts 200 in 76ms (next.js: 31ms, application-code: 45ms)
+✓ Compiled in 577ms
+ GET /images/logo.png 404 in 133ms (next.js: 21ms, application-code: 112ms)
+⨯ The requested resource isn't a valid image for /images/logo.png received null
+ GET / 200 in 1348ms (next.js: 80ms, application-code: 1269ms)
+[browser] Image with src "/images/logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+ GET /services 200 in 137ms (next.js: 9ms, application-code: 128ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /projects 200 in 59ms (next.js: 7ms, application-code: 52ms)
+ GET /contacts 200 in 70ms (next.js: 11ms, application-code: 60ms)
+✓ Compiled in 60ms
+✓ Compiled in 9.4s
+✓ Compiled in 135ms
+✓ Compiled in 56ms
+✓ Compiled in 282ms
+✓ Compiled in 131ms
+ GET / 200 in 1898ms (next.js: 248ms, application-code: 1650ms)
+ GET /images/logo.png 404 in 153ms (next.js: 34ms, application-code: 119ms)
+⨯ The requested resource isn't a valid image for /images/logo.png received null
+[browser] Image with src "/images/logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+ GET /services 200 in 121ms (next.js: 25ms, application-code: 96ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /projects 200 in 86ms (next.js: 28ms, application-code: 58ms)
+ GET /contacts 200 in 71ms (next.js: 23ms, application-code: 47ms)
+✓ Compiled in 4.1s
+✓ Compiled in 744ms

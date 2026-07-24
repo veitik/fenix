@@ -32,7 +32,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-gray-100 ${
-        scrolled ? "bg-gray-50/95 backdrop-blur-md shadow-sm py-3" : "bg-gray-50 py-5"
+        scrolled ? "bg-white/95 backdrop-blur-md shadow-sm py-3" : "bg-white py-5"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,7 +92,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-gray-50 border-b border-gray-100 overflow-hidden"
+            className="md:hidden bg-white border-b border-gray-100 overflow-hidden"
           >
             <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
               {navLinks.map((link) => (

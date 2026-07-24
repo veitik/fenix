@@ -59,7 +59,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       </head>
-      <body className={`${inter.className} bg-gray-50 text-gray-900 antialiased flex flex-col min-h-screen`}>
+      <body className={`${inter.className} bg-[#f4f4f5] relative text-gray-900 antialiased flex flex-col min-h-screen`}>
+
+        <div className="fixed inset-0 z-[-1] opacity-[0.07] pointer-events-none" style={{ backgroundImage: 'url(/images/textures/concrete-wall.jpg)', backgroundSize: 'cover', backgroundAttachment: 'fixed' }}></div>
         <Navbar />
         <main className="flex-grow pt-20">
           {children}

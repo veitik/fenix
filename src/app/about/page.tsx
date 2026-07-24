@@ -24,8 +24,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <Section className="bg-gray-50 relative overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-dot-grid opacity-[0.15] pointer-events-none"></div>
+      <Section className="bg-white/80 backdrop-blur-[2px]">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-24">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Наша история и опыт</h2>
@@ -45,7 +44,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-none p-8 border border-gray-100">
+          <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Наши преимущества</h3>
             <ul className="space-y-6">
               {[
@@ -55,7 +54,7 @@ export default function AboutPage() {
                 { title: "Гарантия качества", desc: "Долгосрочные партнерские взаимоотношения и взаимная выгода.", icon: CheckCircle2 },
               ].map((adv, idx) => (
                 <li key={idx} className="flex gap-4">
-                  <div className="w-10 h-10 rounded-none bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
                     <adv.icon size={20} />
                   </div>
                   <div>
