@@ -59,7 +59,7 @@ export default function Home() {
               animate="visible"
               variants={fadeUp}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-white/5 border border-white/10 backdrop-blur-md mb-6 shadow-sm">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-none bg-gray-50/5 border border-white/10 backdrop-blur-md mb-6 shadow-sm">
                 <span className="w-2 h-2 rounded-none bg-primary animate-pulse"></span>
                 <span className="text-white text-sm font-medium tracking-wider uppercase">Генеральный подрядчик</span>
               </div>
@@ -79,7 +79,7 @@ export default function Home() {
                     <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Button>
-                <Button size="lg" variant="outline" className="text-white border-white/30 hover:bg-white hover:text-gray-900 text-sm tracking-widest uppercase font-semibold h-14 px-8 backdrop-blur-sm rounded-none" href="/projects">
+                <Button size="lg" variant="outline" className="text-white border-white/30 hover:bg-gray-50 hover:text-gray-900 text-sm tracking-widest uppercase font-semibold h-14 px-8 backdrop-blur-sm rounded-none" href="/projects">
                   Наши проекты
                 </Button>
               </div>
@@ -91,7 +91,8 @@ export default function Home() {
       <AnimatedCounters />
 
       {/* About Summary */}
-      <Section className="bg-white overflow-hidden">
+      <Section className="bg-gray-50 overflow-hidden relative">
+        <div className="absolute inset-0 z-0 bg-dot-grid opacity-[0.15] pointer-events-none"></div>
         <motion.div
           ref={aboutRef}
           initial="hidden"
@@ -116,38 +117,38 @@ export default function Home() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4 relative">
-            <div className="absolute inset-0 bg-primary/5 rounded-3xl -rotate-3 scale-105 z-0"></div>
+            <div className="absolute inset-0 bg-primary/5 rounded-none -rotate-3 scale-105 z-0"></div>
 
-            <Card className="bg-white border-gray-100 shadow-xl shadow-gray-200/50 z-10">
+            <Card className="bg-gray-50 border-gray-100 shadow-xl shadow-gray-200/50 z-10">
               <CardContent className="p-8 flex flex-col items-center text-center gap-3">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                <div className="w-14 h-14 rounded-none bg-primary/10 flex items-center justify-center text-primary mb-2">
                   <Award size={28} />
                 </div>
                 <h3 className="font-bold text-2xl text-gray-900">10+ лет</h3>
                 <p className="text-sm text-gray-500">Безупречного опыта</p>
               </CardContent>
             </Card>
-            <Card className="bg-white border-gray-100 shadow-xl shadow-gray-200/50 translate-y-6 z-10">
+            <Card className="bg-gray-50 border-gray-100 shadow-xl shadow-gray-200/50 translate-y-6 z-10">
               <CardContent className="p-8 flex flex-col items-center text-center gap-3">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                <div className="w-14 h-14 rounded-none bg-primary/10 flex items-center justify-center text-primary mb-2">
                   <Users size={28} />
                 </div>
                 <h3 className="font-bold text-2xl text-gray-900">Профи</h3>
                 <p className="text-sm text-gray-500">Штат инженеров</p>
               </CardContent>
             </Card>
-            <Card className="bg-white border-gray-100 shadow-xl shadow-gray-200/50 -translate-y-6 z-10">
+            <Card className="bg-gray-50 border-gray-100 shadow-xl shadow-gray-200/50 -translate-y-6 z-10">
               <CardContent className="p-8 flex flex-col items-center text-center gap-3">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                <div className="w-14 h-14 rounded-none bg-primary/10 flex items-center justify-center text-primary mb-2">
                   <Wrench size={28} />
                 </div>
                 <h3 className="font-bold text-2xl text-gray-900">Свое</h3>
                 <p className="text-sm text-gray-500">Оборудование</p>
               </CardContent>
             </Card>
-            <Card className="bg-white border-gray-100 shadow-xl shadow-gray-200/50 z-10">
+            <Card className="bg-gray-50 border-gray-100 shadow-xl shadow-gray-200/50 z-10">
               <CardContent className="p-8 flex flex-col items-center text-center gap-3">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                <div className="w-14 h-14 rounded-none bg-primary/10 flex items-center justify-center text-primary mb-2">
                   <ShieldCheck size={28} />
                 </div>
                 <h3 className="font-bold text-2xl text-gray-900">Допуск</h3>
@@ -159,7 +160,8 @@ export default function Home() {
       </Section>
 
       {/* Services Overview */}
-      <Section className="relative bg-white overflow-hidden border-t border-cad-border">
+      <Section className="relative bg-gray-50 overflow-hidden border-t border-cad-border">
+        <div className="absolute inset-0 z-0 bg-dot-grid opacity-[0.15] pointer-events-none"></div>
         {/* CAD Style Grid Background */}
         <div className="absolute inset-0 z-0 bg-dot-grid opacity-50 pointer-events-none"></div>
 
@@ -199,8 +201,8 @@ export default function Home() {
               const Icon = service.icon;
               return (
                 <motion.div key={service.id} variants={fadeUp}>
-                  <div className="group relative overflow-hidden bg-white p-8 h-full border-[0.5px] border-cad-border hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 z-10 hover:z-20">
-                    <div className="w-14 h-14 bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-400 mb-6 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300 rounded-sm">
+                  <div className="group relative overflow-hidden bg-gray-50 p-8 h-full border-[0.5px] border-cad-border hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 z-10 hover:z-20">
+                    <div className="w-14 h-14 bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-400 mb-6 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300 rounded-none">
                       <Icon className="w-7 h-7" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors uppercase tracking-wide text-sm">{service.title}</h3>
@@ -229,7 +231,7 @@ export default function Home() {
             animate={servicesInView ? "visible" : "hidden"}
             variants={fadeUp}
           >
-            <Button size="lg" variant="outline" className="border-cad-border hover:border-primary hover:bg-primary hover:text-white uppercase font-bold tracking-wider rounded-sm bg-white" href="/services">
+            <Button size="lg" variant="outline" className="border-cad-border hover:border-primary hover:bg-primary hover:text-white uppercase font-bold tracking-wider rounded-none bg-gray-50" href="/services">
               Все услуги
             </Button>
           </motion.div>
@@ -237,7 +239,8 @@ export default function Home() {
       </Section>
 
       {/* Construction Process Timeline */}
-      <Section className="bg-white">
+      <Section className="bg-gray-50 relative overflow-hidden">
+        <div className="absolute inset-0 z-0 bg-dot-grid opacity-[0.15] pointer-events-none"></div>
         <div className="text-center max-w-2xl mx-auto mb-20">
            <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Этапы</span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 tracking-tight">Процесс Работы</h2>
@@ -254,7 +257,7 @@ export default function Home() {
           className="relative"
         >
           {/* Connecting line */}
-          <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-100 -translate-y-1/2 z-0 rounded-full"></div>
+          <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-100 -translate-y-1/2 z-0 rounded-none"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 relative z-10">
             {[
@@ -265,9 +268,9 @@ export default function Home() {
               { title: "Сдача объекта", icon: CheckCircle2, desc: "Готовый результат" }
             ].map((step, idx) => (
               <motion.div key={idx} variants={fadeUp} className="flex flex-col items-center text-center group">
-                <div className="w-20 h-20 rounded-full bg-white border-[6px] border-gray-50 flex items-center justify-center text-gray-400 group-hover:text-primary group-hover:border-primary/20 transition-all duration-300 shadow-sm mb-6 relative">
+                <div className="w-20 h-20 rounded-none bg-gray-50 border-[6px] border-gray-50 flex items-center justify-center text-gray-400 group-hover:text-primary group-hover:border-primary/20 transition-all duration-300 shadow-sm mb-6 relative">
                   <step.icon size={32} />
-                  <div className="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center border-2 border-white shadow-sm">
+                  <div className="absolute -top-1 -right-1 w-7 h-7 rounded-none bg-primary text-white text-xs font-bold flex items-center justify-center border-2 border-white shadow-sm">
                     {idx + 1}
                   </div>
                 </div>
@@ -305,7 +308,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8 relative z-10">
             {projectsData.slice(0, 3).map(project => (
-              <div key={project.id} className="group relative overflow-hidden rounded-2xl bg-gray-900 border border-gray-800 aspect-[4/3] shadow-2xl">
+              <div key={project.id} className="group relative overflow-hidden rounded-none bg-gray-900 border border-gray-800 aspect-[4/3] shadow-2xl">
                 <Image
                   src={project.image}
                   alt={project.title}

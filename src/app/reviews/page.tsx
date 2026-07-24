@@ -23,13 +23,14 @@ export default function ReviewsPage() {
         </div>
       </section>
 
-      <Section className="bg-white">
+      <Section className="bg-gray-50 relative overflow-hidden">
+        <div className="absolute inset-0 z-0 bg-dot-grid opacity-[0.15] pointer-events-none"></div>
         <div className="grid md:grid-cols-2 gap-8">
           {reviewsData.map((review) => (
-            <div key={review.id} className="bg-gray-50 rounded-2xl p-8 md:p-10 relative">
+            <div key={review.id} className="bg-gray-50 rounded-none p-8 md:p-10 relative">
               <Quote className="absolute top-8 right-8 text-gray-200 w-12 h-12" />
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
+                <div className="w-12 h-12 rounded-none bg-primary/20 flex items-center justify-center text-primary font-bold">
                   {review.client.charAt(0)}
                 </div>
                 <div>
@@ -38,7 +39,7 @@ export default function ReviewsPage() {
                 </div>
               </div>
 
-              <div className="relative aspect-[3/4] w-full bg-gray-100 rounded-lg overflow-hidden border border-gray-200">
+              <div className="relative aspect-[3/4] w-full bg-gray-100 rounded-none overflow-hidden border border-gray-200">
                  <Image src={review.image} alt={`Отзыв от ${review.client}`} fill className="object-cover object-top" sizes="(max-width: 768px) 100vw, 50vw" />
               </div>
 

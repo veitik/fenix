@@ -18,7 +18,8 @@ export default function PrivacyPolicyPage() {
         </div>
       </section>
 
-      <Section className="bg-white">
+      <Section className="bg-gray-50 relative overflow-hidden">
+        <div className="absolute inset-0 z-0 bg-dot-grid opacity-[0.15] pointer-events-none"></div>
         <div className="max-w-3xl mx-auto prose prose-gray">
           <h2>1. Общие положения</h2>
           <p>

@@ -28,7 +28,7 @@ function Counter({ from, to, duration = 2, suffix = "", text }: { from: number; 
   }, [from, to, duration, isInView, hasAnimated, suffix]);
 
   return (
-    <div ref={inViewRef} className="flex flex-col items-center justify-center p-6 sm:p-8 bg-white border-[0.5px] border-cad-border hover:shadow-xl transition-shadow relative overflow-hidden group">
+    <div ref={inViewRef} className="flex flex-col items-center justify-center p-6 sm:p-8 bg-gray-50 border-[0.5px] border-cad-border hover:shadow-xl transition-shadow relative overflow-hidden group">
       <div className="absolute inset-0 bg-dot-grid opacity-30 pointer-events-none"></div>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ function Counter({ from, to, duration = 2, suffix = "", text }: { from: number; 
 
 export function AnimatedCounters() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-0 max-w-6xl mx-auto -mt-16 sm:-mt-24 lg:-mt-28 relative z-20 shadow-2xl bg-white border border-cad-border mb-16 lg:mb-24">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-0 max-w-6xl mx-auto -mt-16 sm:-mt-24 lg:-mt-28 relative z-20 shadow-2xl bg-gray-50 border border-cad-border mb-16 lg:mb-24">
       <Counter from={0} to={10} suffix="+" text="Лет на рынке" duration={2} />
       <Counter from={0} to={50000} suffix="+" text="м² сданных объектов" duration={2.5} />
       <Counter from={0} to={100} suffix="%" text="Соблюдение сроков" duration={2.2} />

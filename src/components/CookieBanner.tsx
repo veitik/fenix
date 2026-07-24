@@ -33,7 +33,7 @@ export default function CookieBanner() {
           transition={{ type: "spring", stiffness: 260, damping: 20 }}
           className="fixed bottom-0 left-0 right-0 z-[100] p-4 md:p-6 pb-6"
         >
-          <div className="max-w-5xl mx-auto bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-100 p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="max-w-5xl mx-auto bg-gray-50/95 backdrop-blur-md rounded-none shadow-2xl border border-gray-100 p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-gray-600 text-sm md:text-base leading-relaxed">
               Мы используем файлы cookie для улучшения работы сайта и анализа трафика. Продолжая использовать сайт, вы соглашаетесь с нашей{" "}
               <Link href="/privacy-policy" className="text-primary hover:underline font-medium">

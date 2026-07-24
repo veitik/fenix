@@ -22,11 +22,12 @@ export default function CertificatesPage() {
         </div>
       </section>
 
-      <Section className="bg-white">
+      <Section className="bg-gray-50 relative overflow-hidden">
+        <div className="absolute inset-0 z-0 bg-dot-grid opacity-[0.15] pointer-events-none"></div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {certificatesData.map((cert) => (
             <div key={cert.id} className="group flex flex-col gap-4">
-              <a href={cert.image} target="_blank" rel="noopener noreferrer" className="relative aspect-[3/4] bg-gray-100 rounded-lg overflow-hidden border border-gray-200 cursor-pointer shadow-sm group-hover:shadow-md transition-shadow block">
+              <a href={cert.image} target="_blank" rel="noopener noreferrer" className="relative aspect-[3/4] bg-gray-100 rounded-none overflow-hidden border border-gray-200 cursor-pointer shadow-sm group-hover:shadow-md transition-shadow block">
                 <Image
                   src={cert.image}
                   alt={cert.title}
@@ -35,7 +36,7 @@ export default function CertificatesPage() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
-                   <div className="opacity-0 group-hover:opacity-100 bg-white/90 text-gray-900 px-4 py-2 rounded-full font-medium text-sm transition-opacity shadow-sm">
+                   <div className="opacity-0 group-hover:opacity-100 bg-gray-50/90 text-gray-900 px-4 py-2 rounded-none font-medium text-sm transition-opacity shadow-sm">
                      Увеличить
                    </div>
                 </div>

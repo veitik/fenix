@@ -59,7 +59,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       </head>
-      <body className={`${inter.className} bg-white text-gray-900 antialiased flex flex-col min-h-screen`}>
+      <body className={`${inter.className} bg-gray-50 text-gray-900 antialiased flex flex-col min-h-screen`}>
         <Navbar />
         <main className="flex-grow pt-20">
           {children}

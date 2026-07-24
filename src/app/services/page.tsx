@@ -23,14 +23,15 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <Section className="bg-white">
+      <Section className="bg-gray-50 relative overflow-hidden">
+        <div className="absolute inset-0 z-0 bg-dot-grid opacity-[0.15] pointer-events-none"></div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {servicesData.map((service) => {
             const Icon = service.icon;
             return (
-              <Card key={service.id} className="group hover:border-primary/50 transition-colors bg-white shadow-sm hover:shadow-md">
+              <Card key={service.id} className="group hover:border-primary/50 transition-colors bg-gray-50 shadow-sm hover:shadow-md">
                 <CardHeader>
-                  <div className="w-14 h-14 rounded-xl bg-gray-50 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-14 h-14 rounded-none bg-gray-50 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Icon size={28} />
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
@@ -49,7 +50,7 @@ export default function ServicesPage() {
         </div>
       </Section>
 
-      <Section className="bg-gray-900 text-white text-center">
+      <Section className="bg-gray-900 text-white text-center relative overflow-hidden">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold mb-4">Нужна нестандартная услуга?</h2>
           <p className="text-gray-400 mb-8">

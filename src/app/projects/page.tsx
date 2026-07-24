@@ -22,10 +22,11 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <Section className="bg-white">
+      <Section className="bg-gray-50 relative overflow-hidden">
+        <div className="absolute inset-0 z-0 bg-dot-grid opacity-[0.15] pointer-events-none"></div>
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
           {projectsData.map((project) => (
-            <div key={project.id} className="break-inside-avoid rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow group bg-white">
+            <div key={project.id} className="break-inside-avoid rounded-none border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow group bg-gray-50">
               <div className="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
                 <Image
                   src={project.image}
@@ -35,7 +36,7 @@ export default function ProjectsPage() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
-                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-semibold text-primary z-10 shadow-sm">
+                <div className="absolute top-4 left-4 bg-gray-50/95 backdrop-blur-sm px-3 py-1.5 rounded-none text-xs font-semibold text-primary z-10 shadow-sm">
                   {project.category}
                 </div>
               </div>
